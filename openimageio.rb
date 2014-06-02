@@ -14,7 +14,7 @@ class Openimageio < Formula
   depends_on 'opencolorio'
   depends_on 'ilmbase'
   depends_on 'openexr'
-  depends_on 'boost'
+  depends_on 'boost' => 'with-python'
   depends_on 'libtiff'
   depends_on 'jpeg'
   depends_on 'openjpeg'
