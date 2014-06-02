@@ -2,8 +2,8 @@ require 'formula'
 
 class Openimageio < Formula
   homepage 'http://openimageio.org'
-  url 'https://github.com/OpenImageIO/oiio/archive/Release-1.4.7.tar.gz'
-  sha1 '09d660be73c11914e5b2177b75f1069d0c3651c8'
+  url 'https://github.com/OpenImageIO/oiio/archive/Release-1.4.8.tar.gz'
+  sha1 '412793b71ba5510709795a47395a78436a4c5344'
 
   head 'https://github.com/OpenImageIO/oiio.git'
 
