@@ -68,12 +68,10 @@ class Openimageio < Formula
       chdir 'localpub'
     end
 
-    j2k = Formula["openjpeg"].linked_keg.realpath
     ENV.append 'MY_CMAKE_FLAGS', "-Wno-dev"   # stops a warning.
-    ENV.append 'MY_CMAKE_FLAGS', "-DOPENJPEG_INCLUDE_DIR=#{j2k}/include/openjpeg-1.5"
+    ENV.append 'MY_CMAKE_FLAGS', "-DOPENJPEG_INCLUDE_DIR=#{Formula["openjpeg"].opt_include}/openjpeg-1.5"
 
-    freetype = Formula["freetype"].prefix
-    ENV.append 'MY_CMAKE_FLAGS', "-DFREETYPE_INCLUDE_DIRS=#{freetype}/include/freetype2"
+    ENV.append 'MY_CMAKE_FLAGS', "-DFREETYPE_INCLUDE_DIRS=#{Formula["freetype"].opt_include}/freetype2"
 
     args = ["USE_TBB=1", "EMBEDPLUGINS=1"]
 
