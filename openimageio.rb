@@ -9,6 +9,7 @@ class Openimageio < Formula
   head 'https://github.com/OpenImageIO/oiio.git'
 
   option 'with-tests',  'Dowload 95MB of test images and verify Oiio (~2 min)'
+  option 'without-qt',  'Get everything but the viewer (which needs Qt)'
 
   depends_on 'cmake' => :build
   depends_on 'pkg-config' => :build
@@ -122,6 +123,9 @@ class Openimageio < Formula
     end
 
     # make is a shell wrapper for cmake crafted by the devs (who have Lion).
+    if build.without? 'qt' then
+        args.push("USE_OPENGL=0")
+    end
     system "make", *args
     system "make test" if build.with? 'tests'
     # There is no working make install in 1.1.6, devel or HEAD.
