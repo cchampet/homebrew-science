@@ -28,6 +28,7 @@ class Openimageio < Formula
   depends_on 'glew'
   depends_on 'qt'
   depends_on 'freetype'
+  depends_on 'openssl'
 
   resource 'j2kp4files' do
     url 'http://pkgs.fedoraproject.org/repo/pkgs/openjpeg/j2kp4files_v1_5.zip/27780ed3254e6eb763ebd718a8ccc340/j2kp4files_v1_5.zip'
