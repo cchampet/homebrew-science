@@ -9,10 +9,10 @@ class Openimageio < Formula
   head 'https://github.com/OpenImageIO/oiio.git'
 
   option 'with-tests',  'Dowload 95MB of test images and verify Oiio (~2 min)'
-  option 'with-qt',  'Build the openimageio viewer (which needs Qt)'
 
   depends_on 'cmake' => :build
   depends_on 'pkg-config' => :build
+  depends_on 'qt' => :optional # for openimageio viewer
   depends_on 'opencolorio'
   depends_on 'ilmbase'
   depends_on 'openexr'
@@ -26,7 +26,6 @@ class Openimageio < Formula
   depends_on 'field3d'
   depends_on 'webp'
   depends_on 'glew'
-  depends_on 'qt'
   depends_on 'freetype'
   depends_on 'openssl'
 
